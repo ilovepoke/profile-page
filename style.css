@@ -1,0 +1,30 @@
+h1{
+    color: navy;
+    text-align:center;
+}
+
+div{
+    background-color:white;
+    padding:20px;
+    width:280px;
+    margin:auto;    
+}
+
+body{
+    background-color: lightgray;
+}
+
+.profile-image img{
+    margin:auto;
+    text-align:center;
+    width:200px;
+    height:auto;
+}
+
+.profile-actions{
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
