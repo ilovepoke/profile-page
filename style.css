@@ -3,20 +3,78 @@ h1{
     text-align:center;
 }
 
-div{
+.profile-card{
     background-color:white;
     padding:20px;
-    width:280px;
-    margin:auto;    
+    max-width:400px;
+    margin:auto;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);    
 }
 
 body{
     background-color: lightgray;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    align-items: center;
+    color: #333;
+    transition: 0.3s;
+}
+
+.dark-mode-toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 18px;
+    border-radius:10px;
+
+    cursor: pointer;
+    font-size:16px;
+}
+
+.dark-mode{
+    background-color: #1e1e1e;
+    color:white;
+}
+
+.dark-mode .profile-card{
+    background-color:#2d2d2d;
+    color:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
+.dark-mode h1{
+    color:#66b3ff;
+}
+
+.dark-mode button{
+    background-color:#444;
+    color:white;
+    border:none;
+}
+
+button{
+    padding: 10px 18px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.profile-image{
+    text-align:center;
 }
 
 .profile-image img{
+    display:block;
     margin:auto;
-    text-align:center;
+    border-radius:50%;
     width:200px;
     height:auto;
 }
@@ -27,4 +85,35 @@ body{
 
 .hidden{
     display:none;
+}
+
+.Profile-card{
+    background-color:white;
+    padding:20px;
+    max-width:400px;
+    margin:auto;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);   
+}
+
+.button-link{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    background-color:#007bff;
+    text-decoration:none;
+    color:white;
+}
+
+.button-link:hover{
+    opacity:0.8;
+}
+
+@media (max-width: 768px){
+    .profile-card{
+        width:90%;
+    }
+
+    .profile-image img{
+        width:150px;
+    }
 }

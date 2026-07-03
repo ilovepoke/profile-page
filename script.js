@@ -1,12 +1,39 @@
-const button = document.getElementById("show-button");
+const themeButton = document.getElementById("theme-toggle");
+// 保存されたテーマを読み込む
+const savedTheme = localStorage.getItem("theme");
+const showButton = document.getElementById("show-button");
 const message = document.getElementById("profile-message");
 
-button.addEventListener("click", function() {
+const portfolioButton = document.getElementById("portfolio-button");
+
+portfolioButton.addEventListener("click", function() {
+    window.location.href = "portfolio.html";
+});
+
+showButton.addEventListener("click", function() {
     message.classList.toggle("hidden");
     if(message.classList.contains("hidden")){
-        button.textContent = "詳しく見る";
+        showButton.textContent = "詳しく見る";
     } else {
-        button.textContent = "閉じる";
+        showButton.textContent = "閉じる";
     };
 });
 
+if(savedTheme === "dark"){
+    document.body.classList.add("dark-mode");
+    themeButton.textContent = "☀️ ライトモード";
+}
+
+themeButton.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        themeButton.textContent = "☀️ ライトモード";
+        localStorage.setItem("theme", "dark");
+    }else{
+        themeButton.textContent = "🌙 ダークモード";
+        localStorage.setItem("theme", "light");
+    }
+
+});
