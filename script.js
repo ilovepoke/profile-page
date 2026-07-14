@@ -7,7 +7,7 @@ const message = document.getElementById("profile-message");
 const portfolioButton = document.getElementById("portfolio-button");
 
 portfolioButton.addEventListener("click", function() {
-    window.location.href = "portfolio.html";
+    window.location.href = "/portfolio.html";
 });
 
 const PayCalculateButton = document.getElementById("PayCalculate-link");
