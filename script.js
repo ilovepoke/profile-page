@@ -6,6 +6,15 @@ const message = document.getElementById("profile-message");
 
 const portfolioButton = document.getElementById("portfolio-button");
 
+portfolioButton.addEventListener("click", function() {
+    window.location.href = "portfolio.html";
+});
+
+const PayCalculateButton = document.getElementById("PayCalculate-link");
+
+PayCalculateButton.addEventListener("click", function() {
+    window.location.href = "pay_calculator/index.html";
+});
 
 showButton.addEventListener("click", function() {
     message.classList.toggle("hidden");
