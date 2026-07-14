@@ -43,3 +43,15 @@ totalForm.addEventListener("submit", function(event){
     event.preventDefault();
     calculate(coinsTotalInput, peopleTotalInput, resultTotalcoins, "*");
 });
+
+const PayCaltoHomeButton = document.getElementById("PayCaltoHome-button");
+
+PayCaltoHomeButton.addEventListener("click", function() {
+    window.location.href = "/portfolio.html";
+});
+
+const PayCalculateButton = document.getElementById("PayCalculate-link");
+
+PayCalculateButton.addEventListener("click", function() {
+    window.location.href = "../pay_calculator/index.html";
+});
