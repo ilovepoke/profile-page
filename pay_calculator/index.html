@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAY CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>PAY CALCULATOR</h1>
+    <div class="pay-split">
+        <h2>Pay Split</h2>
+        <form id="splitForm">
+            <label for="coins">Coins</label>
+            <input type="number" id ="coins" name="coins" min="0" required>
+
+            <span>÷</span>
+
+            <label for="people">People</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <button type="submit" id="splitButton">
+                Calculate
+            </button>
+        </form>
+        <label for="resultTotal">Coins/Person:</label>
+        <p id="resultTotalElement"></p>
+    </div>
+    <div class="pay-total">
+        <h2>Pay Total</h2>
+        <form id="totalForm">
+            <label for="coinsTotal">Coins</label>
+            <input type="number" id ="coinsTotal" name="coinsTotal" min="0" required>
+
+            <span>×</span>
+
+            <label for="peopleTotal">People</label>
+            <input type="number" id="peopleTotal" name="peopleTotal" min="1" required>
+
+            <button type="submit" id="totalButton">
+                Calculate
+            </button>
+        </form>
+        <label for="resultTotalcoins">Coins Total:</label>
+        <p id="resultTotalcoins"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
