@@ -6,9 +6,12 @@ const message = document.getElementById("profile-message");
 
 const portfolioButton = document.getElementById("portfolio-button");
 
-portfolioButton.addEventListener("click", function() {
-    window.location.href = "/portfolio.html";
-});
+if(portfolioButton){
+    portfolioButton.addEventListener("click", function() {
+        console.log(window.location.href);
+        window.location.href = "portfolio.html";
+    });
+}
 
 const PayCalculateButton = document.getElementById("PayCalculate-link");
 
@@ -18,30 +21,34 @@ if (PayCalculateButton) {
     });
 }
 
-showButton.addEventListener("click", function() {
-    message.classList.toggle("hidden");
-    if(message.classList.contains("hidden")){
-        showButton.textContent = "詳しく見る";
-    } else {
-        showButton.textContent = "閉じる";
-    };
-});
+if(showButton){
+    showButton.addEventListener("click", function() {
+        message.classList.toggle("hidden");
+        if(message.classList.contains("hidden")){
+            showButton.textContent = "詳しく見る";
+        } else {
+            showButton.textContent = "閉じる";
+        };
+    });
+}
 
 if(savedTheme === "dark"){
     document.body.classList.add("dark-mode");
     themeButton.textContent = "☀️ ライトモード";
 }
 
-themeButton.addEventListener("click", function(){
-
-    document.body.classList.toggle("dark-mode");
-
-    if(document.body.classList.contains("dark-mode")){
-        themeButton.textContent = "☀️ ライトモード";
-        localStorage.setItem("theme", "dark");
-    }else{
-        themeButton.textContent = "🌙 ダークモード";
-        localStorage.setItem("theme", "light");
-    }
-
-});
+if(themeButton){
+    themeButton.addEventListener("click", function(){
+    
+        document.body.classList.toggle("dark-mode");
+    
+        if(document.body.classList.contains("dark-mode")){
+            themeButton.textContent = "☀️ ライトモード";
+            localStorage.setItem("theme", "dark");
+        }else{
+            themeButton.textContent = "🌙 ダークモード";
+            localStorage.setItem("theme", "light");
+        }
+    
+    });
+}
