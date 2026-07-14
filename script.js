@@ -8,8 +8,7 @@ const portfolioButton = document.getElementById("portfolio-button");
 
 if(portfolioButton){
     portfolioButton.addEventListener("click", function() {
-        console.log(window.location.href);
-        window.location.href = "portfolio.html";
+        window.location.href = "./portfolio.html";
     });
 }
 
