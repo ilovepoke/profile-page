@@ -53,5 +53,5 @@ PayCaltoHomeButton.addEventListener("click", function() {
 const PayCalculateButton = document.getElementById("PayCalculate-link");
 
 PayCalculateButton.addEventListener("click", function() {
-    window.location.href = "../pay_calculator/index.html";
+    window.location.href = "/pay_calculator";
 });

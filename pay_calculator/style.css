@@ -85,3 +85,18 @@ button:hover{
     text-align: center;
     border-radius: 8px;
 }
+
+/*Back to Portfolio*/
+a{
+    display: block;
+    width: 20%;
+    margin-top: 5px;
+    padding: 12px;
+    background-color: orange;
+    color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
