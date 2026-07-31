@@ -141,7 +141,7 @@ button:hover{
     border-radius:50%;
     border: 5px solid #4f8ef7;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width:200px;
+    max-width: 60%;
     height:auto;
 }
 
@@ -180,12 +180,18 @@ button:hover{
     opacity:0.8;
 }
 
-@media (max-width: 768px){
-    .profile-card{
-        width:90%;
+/*=============================================
+    スマホ向け（画面幅600px以下）
+===============================================*/
+@media (max-width: 600px){
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
     }
 
-    .profile-image img{
-        width:150px;
+    .profile-card{
+        margin:20px auto;
+        width:90%;
     }
 }

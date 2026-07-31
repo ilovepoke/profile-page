@@ -70,7 +70,7 @@ h1{
 .pay-split,
 .pay-total{
     flex: content;
-    width: 450px;
+    width: 90%;
     margin: 20px auto;
     padding: 25px;
     background-color: #333;   
@@ -134,4 +134,72 @@ button:hover{
     font-weight:bold;
     text-align: center;
     border-radius: 8px;
+}
+
+/*=============================================
+    スマホ向け（画面幅600px以下）
+=============================================*/
+@media (max-width:600px){
+
+    /* ページ全体 */
+    body{
+        margin-left:0;
+        padding:10px;
+    }
+
+    /* サイドバー */
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        padding:15px;
+    }
+
+    /* 計算カード */
+    .pay-split,
+    .pay-total{
+        width:95%;
+        margin:20px auto;
+        padding:20px;
+    }
+
+    /* フォーム */
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    /* ラベル */
+    label{
+        display:block;
+        width:100%;
+        margin-bottom:5px;
+    }
+
+    /* 入力欄 */
+    input{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    /* ボタン */
+    button{
+        width:100%;
+    }
+
+    /* タイトル */
+    h1{
+        font-size:1.8rem;
+        padding:15px;
+    }
+
+    h2{
+        font-size:1.3rem;
+    }
+
+    /* ×・÷を非表示 */
+    form span{
+        display:none;
+    }
 }
