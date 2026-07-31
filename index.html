@@ -11,11 +11,23 @@
         <div class="dark-mode-toggle">
             <button id="theme-toggle">🌙Dark Mode</button>
         </div>
+
+        <div class = "sidebar">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="index.html">🏠 HOME</a></li>
+                <li><a href="portfolio.html">📸 Portfolio</a></li>
+                <li><a href="#">📄Resume</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Coming soon...</a></li>
+            </ul>
+        </div>
+
         <div class="profile-card">
+            <h1>About Me</h1>
             <div class="profile-image">
                 <img src="images/profile.png" alt="新藤綾那のプロフィール画像">
             </div>
-            <h1>About Me</h1>
             <dl>
                 <dt>名前</dt>
                 <dd>新藤綾那</dd>
@@ -26,25 +38,24 @@
                 <dt>趣味</dt>
                 <dd>
                     <ul>
-                        <li>バスケ</li>
-                        <li>プログラミング</li>
                         <li>読書</li>
+                        <li>映画鑑賞</li>
+                        <li>ランニング</li>
                     </ul>
                 </dd>
             </dl>
 
             <p>Nice to meet you :D</p>
+            <div class ="profile-actions">
+                <button id="show-button">詳しく見る</button>
+                <p id = "profile-message" class="hidden">
+                    こんにちは！
+                    大学で情報工学を学んでいます。
+                </p>
+            </div>
         </div>
 
-        <div class ="profile-actions">
-            <button id="show-button">詳しく見る</button>
-            <p id = "profile-message" class="hidden">
-                こんにちは！
-                山形大学で情報工学を学んでいます。
-            </p>
-
-            <button id="portfolio-button">Portfolio</button>
-        </div>
+        
         <script src="script.js"></script>
     </body>
 

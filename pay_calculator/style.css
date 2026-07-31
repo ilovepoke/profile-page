@@ -1,6 +1,6 @@
 /*ページ全体*/
 body{
-    margin: 0;
+    margin-left: 230px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #222;
     color: white; 
@@ -16,7 +16,57 @@ h1{
     box-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
 
-/*2つのカード*/
+/*============================================
+    サイドバー
+    ==========================================*/
+/*サイドバー全体*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #333;
+    color: navy;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #d1d5bd;
+}
+
+/*サイドバーのタイトル*/
+.sidebar h2{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: black;
+}
+/*メニュー一覧*/
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*メニュー項目*/
+.sidebar li{
+    margin: 18px 0;
+}
+/*メニューのリンク*/
+.sidebar a{
+    color: orange;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color .3s;
+}
+/*マウスを乗せたとき*/
+.sidebar a:hover{
+    background-color: #333;
+}
+
+/*========================================================
+2つのカード
+==========================================================*/
 .pay-split,
 .pay-total{
     flex: content;
@@ -42,7 +92,7 @@ label{
     margin: 10px 0;
 }
 
-/*入力欄*/
+/*coinとpeople入力欄*/
 input{
     width: 120px;
     padding: 8px;
@@ -52,7 +102,7 @@ input{
     margin-bottom: 15px;
 }
 
-/*ボタン*/
+/*calculateボタン*/
 button {
     display: block;
     width: 25%;
@@ -84,19 +134,4 @@ button:hover{
     font-weight:bold;
     text-align: center;
     border-radius: 8px;
-}
-
-/*Back to Portfolio*/
-a{
-    display: block;
-    width: 20%;
-    margin-top: 5px;
-    padding: 12px;
-    background-color: orange;
-    color: black;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
 }
