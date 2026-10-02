@@ -1,0 +1,14 @@
+# 日本郵便CSV
+KEN_ALL.CSV
+JIGYOSYO.CSV
+ken_all_utf8.csv
+jigyosyo_utf8.csv
+
+# 秘密情報
+config.php
+
+# エディタ・OS
+.vscode/
+.DS_Store
+Thumbs.db
+
