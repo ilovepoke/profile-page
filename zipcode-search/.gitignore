@@ -12,3 +12,6 @@ config.php
 .DS_Store
 Thumbs.db
 
+
+# SQLバックアップ
+zip.sql
