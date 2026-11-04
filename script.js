@@ -1,9 +1,3 @@
-// dark mode切り替えボタンを取得
-const themeButton = document.getElementById("theme-toggle");
-
-// 前回選択したテーマ（dark/light）をブラウザから読み込む
-const savedTheme = localStorage.getItem("theme");
-
 // ”詳しく見る”ボタンを取得
 const showButton = document.getElementById("show-button");
 
@@ -36,25 +30,54 @@ if(showButton){
 }
 
 // 前回ダークモードだった場合はページをダークモードで表示
-if(savedTheme === "dark"){
-    document.body.classList.add("dark-mode");
-    themeButton.textContent = "☀️ Light Mode";
+
+// 前回選択したテーマを読み込む
+const savedTheme = localStorage.getItem("theme");
+
+// ダークモード切り替えボタンを取得
+const themeButton = document.getElementById("theme-toggle");
+
+// ダークモード切り替えボタンが存在するページだけ処理する
+if (themeButton) {
+
+    // 前回ダークモードだった場合
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeButton.textContent = "☀️ Light Mode";
+    }
+
+    // ボタンが押されたとき
+    themeButton.addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            themeButton.textContent = "☀️ Light Mode";
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeButton.textContent = "🌙 Dark Mode";
+            localStorage.setItem("theme", "light");
+        }
+    });
 }
 
-// ダークモード切替ボタンが押された時の処理
-themeButton.addEventListener("click", function(){
-    // dark-modeクラスをつけ外ししてテーマを切り替える
-    document.body.classList.toggle("dark-mode");
 
-    if(document.body.classList.contains("dark-mode")){
-        // dark-mode中はボタンの表示を「ライトモード」に変更
-        themeButton.textContent = "☀️ Light Mode";
-        // ダークモードをブラウザに保存
-        localStorage.setItem("theme", "dark");
-    }else{
-        // ライトモード中はボタンの表示を「ダークモード」に変更
-        themeButton.textContent = "🌙 Dark Mode";
-        // ライトモードをブラウザに保存
-        localStorage.setItem("theme", "light");
-    }
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+
+menuToggle.addEventListener("click", ()=>{
+    // メニューの表示・非表示を切り替える
+    sidebar.classList.toggle("active");
+
+    // メニューが開いているか確認する
+    const isOpen = sidebar.classList.contains("active");
+
+    // ボタンの表示を切り替える
+    menuToggle.textContent = isOpen ? "×" : "☰";
+
+    // アクセシビリティ用の状態を更新する
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "メニューを閉じる" : "メニューを開く"
+    );
 });

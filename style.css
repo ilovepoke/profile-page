@@ -5,62 +5,81 @@ h1{
 
 
 /*============================================
-    サイドバー
+    ハンバーガーメニュー
     ==========================================*/
-/*サイドバー全体*/
+/* hamburger menu */
+.menu-toggle{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2000;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 28px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* side menu */
 .sidebar{
     position: fixed;
     top: 0;
     left: 0;
-    width: 220px;
+    width: 250px;
     height: 100vh;
-    background-color: lightgray;
-    color: navy;
+
+    background-color: #f4f4f4;
     padding: 30px 20px;
     box-sizing: border-box;
-    border-right: 2px solid #d1d5bd;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+/* メニューが開いている状態 */
+.sidebar.active{
+    transform: translateX(0);
 }
 
-/*サイドバーのタイトル*/
+/* メニューの見出し */
 .sidebar h2{
-    text-align: center;
-    margin-bottom: 30px;
+    margin-top: 50px;
 }
-/*メニュー一覧*/
+
+/* メニューのリスト */
 .sidebar ul{
     list-style: none;
     padding: 0;
-    margin: 0;
 }
-/*メニュー項目*/
 .sidebar li{
-    margin: 18px 0;
+    margin: 20px 0;
 }
-/*メニューのリンク*/
 .sidebar a{
-    color: hotpink;
     text-decoration: none;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color .3s;
+    color: #333;
+    font-size: 16px;
 }
-/*マウスを乗せたとき*/
+
+/* リンクにマウスを乗せた時 */
 .sidebar a:hover{
-    background-color: #374151;
+    color: #007bff;
 }
-/*===========================================
-    サイドバー　ダークモード
-=============================================*/
-.dark-mode .sidebar{
-    background-color: #2d2d2d
-}
-.dark-mode .sidebar h2{
-    color: #66b3ff;
-}
-.dark-mode .sidebar a:hover{
-    background-color: honeydew;
-}
+
+
+/* メニュー本体（初期状態＝隠れている） */
+
+/* チェックが入った時（＝開いた時） */
+/* メニューを画面内へスライドイン */
+/* 真ん中の線を消す */
+/* 上下の線を回転させて×にする */
+
+
+
 
 /*===========================================
     プロフィールカード
@@ -112,6 +131,16 @@ body{
     color:white;
     border:none;
 }
+
+/*===========================================
+    ポートフォリオ
+=============================================*/
+.dark-mode .Profile-card {
+    background-color:#2d2d2d;
+    color:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+
 
 /*==================================================
     ボタン
